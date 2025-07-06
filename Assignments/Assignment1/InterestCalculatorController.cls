@@ -1,0 +1,24 @@
+<apex:page controller="InterestCalculatorController">
+    <h1>
+        Assignment 1 solved by Niraj Ramnani
+    </h1>
+    <apex:form >
+        <apex:pageBlock title="Simple Interest and Compound Interest Calculator">
+
+            <apex:pageBlockSection columns="1">
+                <apex:inputText label="Principal" value="{!principal}" />
+                <apex:inputText label="Interest" value="{!interestRate}" />
+                <apex:inputText label="No Of Years" value="{!noOfYears}" />
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="SI" action="{!calculateSI}" />
+                <apex:commandButton value="CI" action="{!calculateCI}" />
+                <apex:commandButton value="Clear" action="{!clearFields}" />
+            </apex:pageBlockButtons>
+
+            <apex:outputText value="SI Output: {!output}" style="font-weight:bold; margin-top:15px;" />
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
